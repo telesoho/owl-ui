@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates xml:space="preserve">
+    <t t-name="owlui.root" owl="1">
+        <div class="root" t-on-click="update">Hello<t t-esc="state.text" />
+        </div>
+    </t>
+</templates>
