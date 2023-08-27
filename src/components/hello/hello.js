@@ -1,8 +1,8 @@
-import { Component, xml, useState } from "@odoo/owl";
-export class Root extends Component {
+import { Component, useState } from "@odoo/owl";
+export class Hello extends Component {
   state = useState({ text: "Owl" });
   update() {
     this.state.text = this.state.text === "Owl" ? "World" : "Owl";
   }
 }
-Root.template = 'owlui.root';
+Hello.template = 'owlui.root';

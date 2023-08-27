@@ -74,7 +74,7 @@
     "rollup-plugin-string": "^3.0.0"
   },
   "dependencies": {
-    "@odoo/owl": "^2.2.3"
+    "@odoo/owl": "^2.2.5"
   },
   "prettier": {
     "printWidth": 100,

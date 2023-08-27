@@ -1,7 +1,7 @@
 // jest.useFakeTimers(); // Use this to test timeout
-import { Root } from "../root";
+import { Hello } from "../hello";
 import { nextTick, makeTestFixture, loadAllTemplates } from '../../../helper.js';
-import { mount, Component, useState, xml } from "@odoo/owl";
+import { mount } from "@odoo/owl";
 
 
 //------------------------------------------------------------------------------
@@ -22,16 +22,16 @@ afterEach(() => {
 //------------------------------------------------------------------------------
 // Tests
 //------------------------------------------------------------------------------
-describe("Root", () => {
+describe("Hello sample component", () => {
     test("component behaves as expected", async () => {
         const props = { templates: templates }; // depends on the component
-        await mount(Root, fixture, props);
+        await mount(Hello, fixture, props);
         await nextTick();
-        console.info(fixture.innerHTML)
+        console.debug(fixture.innerHTML)
         const el = fixture.querySelector('div.root');
         el.click();
         await nextTick();
-        console.info(fixture.innerHTML)
+        console.debug(fixture.innerHTML)
     });
 
 });

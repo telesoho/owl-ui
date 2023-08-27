@@ -17,6 +17,7 @@ let input, output;
 // `;
 
 const outro = `
+__info__.date = '${new Date().toISOString()}';
 __info__.url = 'https://github.com/telesoho/owl-ui';
 `;
 
@@ -46,7 +47,10 @@ function getConfigForFormat(format, generatedFileName, outro, minified = false) 
     outro: outro,
     freeze: false,
     plugins: minified ? [terser()] : [],
-    indent: '  ', // indent with 2 spaces
+    indent: '  ', // indent with 2 spaces,
+    globals: {
+      '@odoo/owl': 'owl'
+    }
   };
 }
 
@@ -75,6 +79,7 @@ export default [
   {
     input,
     output,
-    plugins: [json()]
+    plugins: [json()],
+    external: ['@odoo/owl']
   }
 ];
