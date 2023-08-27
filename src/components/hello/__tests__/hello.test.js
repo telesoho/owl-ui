@@ -28,7 +28,7 @@ describe("Hello sample component", () => {
         await mount(Hello, fixture, props);
         await nextTick();
         console.debug(fixture.innerHTML)
-        const el = fixture.querySelector('div.root');
+        const el = fixture.querySelector('div.hello');
         el.click();
         await nextTick();
         console.debug(fixture.innerHTML)

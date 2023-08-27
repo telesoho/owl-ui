@@ -5,4 +5,4 @@ export class Hello extends Component {
     this.state.text = this.state.text === "Owl" ? "World" : "Owl";
   }
 }
-Hello.template = 'owlui.root';
+Hello.template = 'owlui.hello';
