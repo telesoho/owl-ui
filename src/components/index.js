@@ -1,1 +1,1 @@
-export * from "./hello/index"
+export * from "./hello/index";
